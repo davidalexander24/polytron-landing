@@ -77,13 +77,13 @@ function CategoryCard({ cat, index }: { cat: (typeof categories)[0]; index: numb
         className="lg:col-span-2 group relative bg-white border border-[#E8E8E8] rounded-none overflow-hidden cursor-pointer product-card-hover"
         style={{ minHeight: "420px" }}
       >
-        <div className="absolute right-0 top-0 bottom-0 w-[55%] overflow-hidden">
+        <div className="absolute inset-0 lg:right-0 lg:left-auto lg:top-0 lg:bottom-0 lg:w-[55%] overflow-hidden">
           <img
             src={cat.imageSrc}
             alt={cat.imageAlt}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-70"
+            className="w-full h-full object-contain lg:object-cover object-right lg:object-center group-hover:scale-105 transition-transform duration-700 opacity-20 lg:opacity-70"
           />
-          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-white/40 to-white" />
+          <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-l from-transparent via-white/80 lg:via-white/40 to-white" />
         </div>
 
         <div className="relative z-10 p-10 flex flex-col justify-between h-full">

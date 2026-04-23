@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
-import { ChevronRight, Wifi, Thermometer, Wind, Shield, Leaf, Zap } from "lucide-react";
+import { ChevronRight, Wifi, Thermometer, Wind, Shield, Leaf, Zap, Battery, MapPin, Clock, RefreshCw } from "lucide-react";
 
 function AnimatedCounter({
   target,
@@ -47,21 +47,21 @@ function AnimatedCounter({
 
 const baasFeatures = [
   {
-    num: "01", title: "Swap Baterai Instan", desc: "Ganti baterai dalam hitungan menit di 500+ stasiun swap Polytron di seluruh Indonesia.",
+    icon: Battery, title: "Swap Baterai Instan", desc: "Ganti baterai dalam hitungan menit di 500+ stasiun swap Polytron di seluruh Indonesia.",
   },
   {
-    num: "02", title: "500+ Stasiun Swap", desc: "Jaringan stasiun penukaran baterai terluas di Indonesia, terus berkembang setiap harinya.",
+    icon: MapPin, title: "500+ Stasiun Swap", desc: "Jaringan stasiun penukaran baterai terluas di Indonesia, terus berkembang setiap harinya.",
   },
   {
-    num: "03", title: "Layanan 24 Jam", desc: "Operasional 24/7 memastikan kamu tidak pernah berhenti, kapanpun perjalananmu dimulai.",
+    icon: Clock, title: "Layanan 24 Jam", desc: "Operasional 24/7 memastikan kamu tidak pernah berhenti, kapanpun perjalananmu dimulai.",
   },
   {
-    num: "04", title: "Siklus Tanpa Batas", desc: "Tidak ada biaya penggantian baterai, cukup bayar per swap sesuai kebutuhan perjalananmu.",
+    icon: RefreshCw, title: "Siklus Tanpa Batas", desc: "Tidak ada biaya penggantian baterai, cukup bayar per swap sesuai kebutuhan perjalananmu.",
   },
 ];
 
 const ecoFeatures = [
-  { num: "01", label: "Kontrol WiFi", sub: "Neuva Pro AC", icon: Wifi },
+  { icon: Battery, label: "Kontrol WiFi", sub: "Neuva Pro AC", icon: Wifi },
   { num: "02", label: "Sensor Suhu", sub: "Smart Home", icon: Thermometer },
   { num: "03", label: "Inverter Tech", sub: "Hemat Energi", icon: Wind },
   { num: "04", label: "Garansi 3 Tahun", sub: "Terpercaya", icon: Shield },
@@ -186,11 +186,11 @@ export default function LifestyleSection() {
               className="relative"
             >
               {/* Main image */}
-              <div className="relative rounded-none overflow-hidden border border-[#E8E8E8]" style={{ height: "360px" }}>
+              <div className="relative rounded-none overflow-hidden border border-[#E8E8E8] h-[240px] md:h-[360px]">
                 <img
                   src="/products/Polytron_Battery-as-a-Service_swapstation.jpg"
                   alt="Polytron Battery-as-a-Service swap station, modern kiosk with glowing Polytron branding, person swapping battery module from a Fox 500 motorbike, futuristic charging bay environment at night"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/80 via-transparent to-transparent" />
 
@@ -247,7 +247,7 @@ export default function LifestyleSection() {
                 transition={{ duration: 0.5, delay: 0.4 + i * 0.1 }}
                 className="group rounded-none bg-white border border-[#E8E8E8] p-5 hover:border-[#E8E8E8] transition-all duration-300"
               >
-                <div className="mb-3"><span className="font-display text-[#ED1C24] text-4xl leading-none opacity-80" style={{ fontFamily: "var(--font-bebas), Impact, sans-serif" }}>{feature.num}</span></div>
+                <div className="mb-3"><feature.icon size={32} className="text-[#ED1C24]" /></div>
                 <h4 className="text-[#0D0D0D] font-semibold text-sm mb-1.5">
                   {feature.title}
                 </h4>
@@ -295,7 +295,7 @@ export default function LifestyleSection() {
           </div>
         </motion.div>
 
-        {/* ——— Smart Home Eco Section ——— */}
+        {/* - Smart Home Eco Section - */}
         <div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -318,11 +318,11 @@ export default function LifestyleSection() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="rounded-none overflow-hidden border border-[#E8E8E8]" style={{ height: "420px" }}>
+              <div className="rounded-none overflow-hidden border border-[#E8E8E8] h-[260px] md:h-[420px]">
                 <img
                   src="/products/SmarthomeinteriorsceneshowingaPolytronNeuvaProAC.jpg"
                   alt="Smart home interior scene showing a Polytron Neuva Pro AC, Flexup refrigerator, and smart TV all connected via Polytron app on a smartphone, modern Indonesian living room with warm ambient lighting"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0D0D0D]/60" />
               </div>
