@@ -238,16 +238,16 @@ export default function LifestyleSection() {
           </div>
 
           {/* BaaS feature grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
             {baasFeatures.map((feature, i) => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.4 + i * 0.1 }}
-                className="group rounded-none bg-white border border-[#E8E8E8] p-5 hover:border-[#E8E8E8] transition-all duration-300"
+                className="group rounded-none bg-white border border-[#E8E8E8] p-4 lg:p-5 hover:border-[#E8E8E8] transition-all duration-300"
               >
-                <div className="mb-3"><feature.icon size={32} className="text-[#ED1C24]" /></div>
+                <div className="mb-3"><feature.icon size={28} className="text-[#ED1C24] lg:w-8 lg:h-8" /></div>
                 <h4 className="text-[#0D0D0D] font-semibold text-sm mb-1.5">
                   {feature.title}
                 </h4>
@@ -322,7 +322,7 @@ export default function LifestyleSection() {
                 <img
                   src="/products/SmarthomeinteriorsceneshowingaPolytronNeuvaProAC.jpg"
                   alt="Smart home interior scene showing a Polytron Neuva Pro AC, Flexup refrigerator, and smart TV all connected via Polytron app on a smartphone, modern Indonesian living room with warm ambient lighting"
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-right lg:object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0D0D0D]/60" />
               </div>
