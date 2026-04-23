@@ -61,7 +61,7 @@ const baasFeatures = [
 ];
 
 const ecoFeatures = [
-  { icon: Battery, label: "Kontrol WiFi", sub: "Neuva Pro AC", icon: Wifi },
+  { num: "01", label: "Kontrol WiFi", sub: "Neuva Pro AC", icon: Wifi },
   { num: "02", label: "Sensor Suhu", sub: "Smart Home", icon: Thermometer },
   { num: "03", label: "Inverter Tech", sub: "Hemat Energi", icon: Wind },
   { num: "04", label: "Garansi 3 Tahun", sub: "Terpercaya", icon: Shield },

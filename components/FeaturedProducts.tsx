@@ -192,7 +192,7 @@ function ProductCard({ product, index }: { product: (typeof products)[0]; index:
         <div className="flex items-center gap-1.5 mb-3">
           <StarRating rating={product.rating} />
           <span className="text-[#9E9E9E] text-[10px]">
-            {product.rating} ({product.reviews.toLocaleString()})
+            {product.rating} ({product.reviews.toLocaleString("id-ID")} ulasan)
           </span>
         </div>
         <div className="flex flex-wrap gap-1 mb-4">
